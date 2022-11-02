@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"content="width=device-width,initial-scale=1">
+	<title>Atribut Javascript</title>
+</head>
+<body>
+	<button onclick="alert('nt muluu ')">
+		Klik aku cevatttt
+	</button>
+	<select id="nama" onchange="pilih()">
+		<option value="udin">Samsudin</option> 
+		<option value="jindan">Jindan</option>
+	</select>
+	<script>
+		function pilih(){
+			var nama_js = document.getElementById('nama').value;//perintah" yang tampil dlm html
+			if (nama_js=='udin'){
+				alert('iyoooooo');
+			}else if (nama_js=='jindan'){
+				alert('nt woeeeee');
+			}
+		}
+		
+	</script>
+</body>
+</html>
+
+

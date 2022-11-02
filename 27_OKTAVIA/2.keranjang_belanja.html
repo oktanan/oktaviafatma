@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Keranjang belanja</title>
+</head>
+<body>
+    <h1 style="text-align: center; margin-top: 20px;">KERANJANG BELANJA</h1>
+    <br>
+    <div class="container">
+      <form class="row g-3">
+        <div class="col-6">
+          <label for="inputbolpoin" class="visually-hidden">Bolpoin</label>
+          <input type="number" class="form-control" id="inputbolpoin" placeholder="Jumlah Bolpoin" input>
+        </div>
+      </form>
+    <hr>
+    <form class="row g-3">
+      <div class="col-6">
+        <label for="inputbuku" class="visually-hidden">Buku</label>
+        <input type="number" class="form-control" id="inputbuku" placeholder="Jumlah Buku" input>
+      </div>
+    </form>
+    <hr>
+    <form class="row g-3">
+      <div class="col-6">
+        <label for="inputpensil" class="visually-hidden">Pensil</label>
+        <input type="number" class="form-control" id="inputpensil" placeholder="Jumlah Pensil" input>
+      </div>
+    </form>
+    <hr>
+    <form class="row g-3">
+      <div class="col-6">
+        <label for="inputpenghapus" class="visually-hidden">Penghapus</label>
+        <input type="number" class="form-control" id="inputpenghapus" placeholder="Jumlah Penghapus" input>
+      </div>
+    </form>
+    <hr>
+    <form class="row g-3">
+      <div class="col-6">
+        <label for="inputdiskon" class="visually-hidden">DISKON</label>
+        <input type="number" class="form-control" id="inputdiskon" placeholder=" Diskon" input>
+      </div>
+    </form>
+    <hr>
+    <div class="col-auto">
+      <button type="button" class="btn btn-primary mb-3" onclick="bayar()">HITUNG</button>
+    </div>
+    <hr>
+    <br>
+    <div>
+      <h1 id="totalharga">TOTAL HARGA</h1>
+      <h1 id="diskon"> </h1>
+      <h1 id="totalbayar"> </h1>
+    </div>
+    </div>
+
+    <script>
+      function bayar(){
+        var bolpoin = parseInt(document.getElementById('inputbolpoin').value);
+        var buku = parseInt(document.getElementById('inputbuku').value);
+        var pensil = parseInt(document.getElementById('inputpensil').value);
+        var penghapus = parseInt(document.getElementById('inputpenghapus').value);
+        var totalharga = bolpoin * 2000 + buku * 5000 + pensil * 20000 + penghapus * 1000;
+        console.log(totalharga);
+        var diskon = parseInt(document.getElementById('inputdiskon').value);
+        var diskonAkhir = diskon / 100;
+        var hargaDiskon = totalharga * diskonAkhir;
+        var hargaAkhir = totalharga - hargaDiskon;
+        var totalTampil = document.getElementById('totalbayar');
+        totalTampil.innerHTML = hargaAkhir;
+      }
+    </script>
+</body>
+</html>

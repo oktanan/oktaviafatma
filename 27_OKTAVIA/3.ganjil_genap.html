@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganjil Genap</title>
+</head>
+<body>
+    <center><h1>MENENTUKAN BILANGAN GANJIL GENAP</h1></center>
+    <label for="">MASUKAN ANGKA</label><input type="number" id="input"><button onclick="cek()">CEK</button>
+    <h2 id="hasil"></h2>
+    <script>
+        function cek(){
+          var bilangan = document.getElementById('input').value;
+          var notif;
+          if (bilangan%2==0) {
+            notif = "Bilangan "+bilangan+" Adalah Bilangan Genap";
+        } else {
+             notif = "Bilangan "+bilangan+" Adalah Bilangan Ganjil";
+                    }
+          alert(notif);
+        }
+        </script>
+</body>
+</html>

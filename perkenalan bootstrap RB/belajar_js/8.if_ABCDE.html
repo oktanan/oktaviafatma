@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="number" name="" id="nilai" placeholder="Masukkan Nilai">
+  <button onclick="menentukan()">Tentukan nilai</button>
+
+
+  <script>
+    
+    function menentukan() {
+      var x = document.getElementById('nilai').value;
+      if (x<=60) {
+        alert('E');
+      }else if (x>60 && x<=70){
+        alert('D');
+      }else if (x>70 && x<=80){
+        alert('C');
+      }else if (x>80 && x<=90){
+        alert('B');
+      }else if (x>90 && x<=100){
+        alert('A');
+      } else{
+        alert('nilai yang anda masukkan tidak VALID');
+      }
+    }
+  </script>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+  <input type="number" id="nilai" onchange="hasil()">
+  <h1 id="tampil">isi dari tag h3 id tampil</h1>
+  <script>
+    
+    function hasil() {
+      var nilai = document.getElementById('nilai').value;
+      var tampil = document.getElementById('tampil');
+      //document
+      tampil.innerHTML = nilai
+      if (nilai<=60) {
+        alert('E');
+      }else if (nilai>60 && nilai<=70){
+        alert('D');
+      }else if (nilai>70 && nilai<=80){
+        alert('C');
+      }else if (nilai>80 && nilai<=90){
+        alert('B');
+      }else if (nilai>90 && nilai<=100){
+        alert('A');
+      } else{
+        alert('nilai yang anda masukkan tidak VALID');
+      }
+    }
+  </script>
+</body>
+</html>

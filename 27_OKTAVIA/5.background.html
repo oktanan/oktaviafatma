@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACKGROUND</title>
+</head>
+<body>
+    <center>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <label for="">Pilih Warna Background :</label>
+    <select name="list" onchange="change(this)">
+        <option value="red">RED</option>
+        <option value="white">WHITE</option>
+        <option value="blue">BLUE</option>
+        <option value="green">GREEN</option>
+        <option value="orange">ORANGE</option>
+        <option value="grey">GREY</option>
+        <option value="yellow">YELLOW</option>
+    </select>
+
+    <script>
+        function change(list){
+            var val = list.options[list.selectedIndex].value;
+            document.body.style.background=val;
+        }
+    </script>
+    </center>
+</body>
+</html>

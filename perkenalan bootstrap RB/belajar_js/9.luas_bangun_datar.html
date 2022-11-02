@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+         div	{
+	margin: auto ;
+	width: 400px;
+	margin-top: 150px;
+}
+table {
+	border-style: none;
+	border-collapse: collapse;
+	width: 100%;
+}
+th{
+	background-color: #72a7da;
+	padding: 10px;
+	border: none;
+	font-size: 22px;
+}
+td{
+	border: none;
+}
+input[type=text]{
+	padding: 10px;
+	width: 380px;
+	border-style: solid;
+	border-color: #6d6e6a;
+	font-size: 16px;
+}
+input[type=text]:disabled{
+	background-color: white;
+}
+button {
+	width: 28%;
+	height: 40px;
+	background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+    </style>
+    <title>Bangun Datar</title>
+</head>
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Luas Persegi</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td><input type="text" id="ipt_sisi" placeholder="masukan sisi persegi"></td>
+                </tr>
+                <tr>
+                    <td><button onclick="hitung()">Hitung</button></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Luas persegi</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="opt_luas" disabled></td>
+                </tr>
+                <tr>
+                    <td>Keliling persegi</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="opt_keliling" disabled></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <script>
+        var luas;
+        var keliling;
+        var sisi;
+        function hitung() {
+	        sisi = parseFloat(document.getElementById("ipt_sisi").value);
+	        luas = sisi * sisi;
+	        keliling = sisi * 4;
+	        document.getElementById('opt_luas').value = luas;
+	        document.getElementById('opt_keliling').value = keliling;
+        }
+    </script>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

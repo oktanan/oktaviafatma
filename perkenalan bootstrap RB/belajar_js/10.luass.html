@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Luas Bangun Datar</title>
+    <style>
+        body{
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            color: black;
+            transition: .5s;
+        }
+        input[type="checkbox"]{
+            position: relative;
+            width: 40px;
+            height: 20px;
+            appearance: none;
+            background-color: black;
+            outline: none;
+            border-radius: 10px;
+            transition: .5s ease;
+            cursor: pointer;
+        }
+        input[type="checkbox"]:checked{
+            background-color: blue;
+        }
+        input[type="checkbox"]::before{
+           content: '';
+           position: absolute;
+           width: 16px;
+           height: 16px;
+           background-color: white;
+           border-radius: 50%;
+           top: 2px;
+           left: 2px;
+           transition: .5s ease;
+        }
+        input[type="checkbox"]:checked::before{
+            transform: translateX(20px);
+        }
+        .dark{
+            background-color: black;
+            color: white;
+        }
+        
+    </style>
+</head>
+  <body>
+    <h1>Mode Dark/Light</h1>
+    <p>Klik Tombol di bawah untuk merubah tampilan gelap atau terang</p>
+    <input type="checkbox" onclick="ubahMode()">
+    <script>
+        function ubahMode(){
+            const ubah = document.body;
+            ubah.classList.toggle("dark");
+        }
+        </script>
+
+    <!--akhir background-->
+    <center><h2>Menghitung Luas Bangun Datar</h2></center>
+    <br>
+    <div class="container mb-3">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Luas Persegi</label>
+            <input type="number" class="form-control" id="s" placeholder="Masukkan Sisi" />
+        </div>
+      <button type="submit" class="btn btn-primary" onclick="persegi()">Hitung</button>
+      <br><br>
+      <label id="luaspersegi">Jawab </label>
+    </div>
+    <br>
+    <div class="container mb-3">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Luas Persegi Panjang</label>
+        <input type="number" class="form-control" id="p" placeholder="Masukkan Panjang" />
+        <input type="number" class="form-control mt-3" id="l" placeholder="Masukkan Lebar" />
+      </div>
+      <button type="submit" class="btn btn-primary" onclick="persegi_panjang()">Hitung</button>
+      <br><br>
+      <label id="persegipanjang">Jawab</label>
+    </div>
+    <br>
+    <div class="container mb-3">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Luas Segitiga</label>
+        <input type="number" class="form-control" id="a" placeholder="Masukkan Alas" />
+        <input type="number" class="form-control mt-3" id="t" placeholder="Masukkan Tinggi" />
+      </div>
+      <button type="submit" class="btn btn-primary" onclick="segitiga()">Hitung</button>
+      <br><br>
+      <label id="segitiga">Jawab</label>
+    </div>
+    <br>
+    <div class="container mb-3">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Luas Lingkaran</label>
+        <input type="number" class="form-control" id="r" placeholder="Masukkan Jari-jari" />
+      </div>
+      <button type="submit" class="btn btn-primary" onclick="lingkaran()">Hitung</button>
+      <br><br>
+      <label id="lingkaran">Jawab</label>
+    </div>
+</div>
+    </div>
+        <script>
+            function persegi() {
+              var s = document.getElementById("s").value;
+              var luas  =  s * s;
+              var luaspersegi = document.getElementById("luaspersegi");
+              luaspersegi.innerHTML = luas;
+            }
+            function persegi_panjang() {
+              var p = document.getElementById("p").value;
+              var l = document.getElementById("l").value;
+              var luas =   p * l;
+              var persegipanjang = document.getElementById("persegipanjang");
+              persegipanjang.innerHTML = luas;
+              
+            }
+            function segitiga() {
+              var a = document.getElementById("a").value;
+              var t = document.getElementById("t").value;
+              var luas = (a * t) / 2;
+              var segitiga = document.getElementById("segitiga");
+              segitiga.innerHTML = luas;
+            }
+            function lingkaran() {
+              var r = document.getElementById("r").value;
+              var luaslingkaran = 3.14 * r * r;
+              var lingkaran = document.getElementById("lingkaran");
+              lingkaran.innerHTML = luaslingkaran;
+
+            }
+        </script>
+           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

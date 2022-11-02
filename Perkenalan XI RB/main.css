@@ -1,0 +1,105 @@
+.navigasi{
+	background-color: slategray;
+	color: white;
+	font-size: 50px;
+	overflow: hidden;
+	list-style-type: none;
+	padding-top: 33px;
+	padding-bottom:33px;
+	position: fixed;
+	width: 200%;
+	margin-top: 0;
+	top: 0;
+	float: right;
+
+}
+.navigasi li{
+	float: left;
+	margin-left: 250px;
+	text-decoration: none;
+	text-decoration: underline;
+	list-style-type: none;
+}
+ .nn{
+ 	float: left;
+ }
+.gambar{
+	width: 380px;
+	border-radius: 300px;
+}
+.kal1{
+	font-size: 50px;
+	font-family: mo;
+}
+.kal2{
+	font-size: 35px;
+	font-family: sans-serif;
+}
+.p2{
+	font-size: 30px;
+	font-family: cursive;
+}
+.gambar1{
+	width: 250px;
+	height: 250px;
+	border-radius: 70px;
+	margin-left: 25px;
+}
+.gambar1:hover{
+	transform: scale(1.2);
+	height: 270px;
+	border: 10px solid black;
+}
+.p3{
+	background-color: slategrey;
+	color: black;
+	font-size: 40px;
+	overflow: hidden;
+	list-style-type: none;
+}
+.cp{
+	font-feature-settings: inherit;
+	font-size: 30px;
+}
+.sosmed{
+	width: 30px;
+	height: 30px;
+	margin-left: 13px;
+}
+a:hover{
+	color: black;
+	background-color: white;
+
+}
+.df{
+	background-color: grey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 0px;
+}
+.daftar{
+	background-color: darkgrey;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+td{
+	padding: 20px;
+	font-size: 28px;
+}
+.formulir{
+	padding: 20px;
+	font-size: 30px;
+}
+input{
+	padding-top: 20px;
+	margin-bottom: 20px: 
+	margin-right: 200px;
+}
+select{
+	padding-top: 10px;
+	margin-bottom: 5px: 
+}
+button{
+	padding-top: 10px;
+	margin-bottom: 10px: 
+}

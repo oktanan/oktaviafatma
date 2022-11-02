@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Belajar Variable dan Tipe data</title>
+</head>
+<body>
+	Nama : <div id="nama"></div>
+	<br>
+	Umur : <div id="umur"></div>
+	<br>
+	Status : <div id="status"></div>
+	<br>
+	Link Instagram : <a id="instagram" >Klik me</a>
+	<script>
+		//menampung variabel div id pada document HTML
+		var id_nama = document.getElementById('nama');
+		var id_umur = document.getElementById('umur');
+		var id_status = document.getElementById('status');
+		var id_instagram = document.getElementById('instagram');
+		//membuat variable
+		var nama ="Oktavia Fatmawati";
+		var umur = 17;
+		var harga = 30000;
+		var status = 'Gamonn';
+		var instagram ="https://instagram.com/oktanan?igshid=YmMyMTA2M2Y";
+		//output ke document HTML
+		id_nama.innerHTML = nama;
+		id_umur.innerHTML = umur +' Tahun '; //contoh pengabungan antar variabel
+		id_status.innerHTML = status;
+		id_instagram.href = instagram;
+	</script>
+</body>
+</html>
